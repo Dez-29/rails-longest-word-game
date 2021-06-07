@@ -22,6 +22,7 @@ class GamesController < ApplicationController
     if included?()
       if english_word?(params[:word])
         @result = "Congratulations!"
+        @score = "Your score is #{params[:word].size}"
       else
         @result = "It's not an English word"
       end
